@@ -54,6 +54,10 @@ Access the __HAProxy statistics report__ at:
 
 `http://<remote-public-IP-or-DNS>/haproxy?stats`
 
+__username:__ admin
+
+__passowrd:__ admin
+
 To view logs for the __Nginx__ and __HAProxy__ containers, use the following commands:
 
 `docker logs <nginx-container-id>`
