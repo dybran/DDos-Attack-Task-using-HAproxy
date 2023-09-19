@@ -27,10 +27,10 @@ Use the provided __ansible-docker.sh__ script to install the required packages o
 
 Create the necessary directory structure on the deploy VM:
 
-__php:__ This directory will hold the __index.php__ file.
-__ansible:__ This directory is designated for Ansible __roles__ and the __ansible.cfg__ configuration file.
-__nginx:__ Store the __default.conf__ file here.
-__haproxy:__ This directory will contain the __haproxy.cfg__ file.
+- __php:__ This directory will hold the __index.php__ file.
+- __ansible:__ This directory is designated for Ansible __roles__ and the __ansible.cfg__ configuration file.
+- __nginx:__ Store the __default.conf__ file here.
+- __haproxy:__ This directory will contain the __haproxy.cfg__ file.
 
 __Ansible Configuration for Remote VM__
 
