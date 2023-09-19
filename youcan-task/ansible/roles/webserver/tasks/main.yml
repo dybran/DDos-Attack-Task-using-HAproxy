@@ -1,0 +1,53 @@
+---
+# tasks file for webserver
+
+
+    - name: Update package cache
+      apt:
+        update_cache: yes
+    
+    - name: Install required packages
+      apt:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - docker.io
+        - docker-compose
+      
+        
+    - name: Set executable permission
+      file:
+        path: /usr/bin/docker-compose
+        mode: "0755" 
+      
+    - name: Start and enable Docker service
+      service:
+        name: docker
+        state: started
+        enabled: yes
+      
+    - name: Add the ubuntu user to the docker group
+      user:
+        name: ubuntu
+        group: docker
+        state: present
+     
+    - name: Ensure the directory exists
+      file:
+        path: /home/ubuntu/youcan-task
+        state: directory
+
+    - name: Copy configuration and code files to remote server
+      copy:
+        src: "{{ item }}"
+        dest: /home/ubuntu/youcan-task
+      with_items:
+        - ../docker-compose.yml
+        - ../haproxy
+        - ../nginx
+        - ../php
+           
+    - name: Start Docker Compose
+      command: docker-compose up -d
+      args:
+        chdir: /home/ubuntu/youcan-task
