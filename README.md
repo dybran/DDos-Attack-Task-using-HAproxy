@@ -17,7 +17,7 @@ Log in to the __deploy__ VM using SSH.
 
 __Installing Dependencies__
 
-Use the provided __ ansible-docker.sh__ script to install the required packages on the __deploy__ VM, including __ansible__, __docker__ and __docker compose__.
+Use the provided __ansible-docker.sh__ script to install the required packages on the __deploy__ VM, including __ansible__, __docker__ and __docker compose__.
 
 `chmod +x ansible-docker.sh`
 
