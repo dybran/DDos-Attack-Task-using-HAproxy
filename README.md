@@ -56,7 +56,7 @@ Access the __HAProxy statistics report__ at:
 
 __username:__ admin
 
-__passowrd:__ admin
+__password:__ admin
 
 To view logs for the __Nginx__ and __HAProxy__ containers, use the following commands:
 
