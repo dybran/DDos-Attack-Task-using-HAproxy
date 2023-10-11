@@ -1,4 +1,4 @@
-# Youcan Devops task - Coding challenge III: Save our app from DDos attacks
+# Youcan Devops task - Coding challenge III: Save our app from DDos attacks.
 
 In this DevOps task, I demonstrated the use of HAProxy's in-memory stick table to secure our platform by tracking our users` activities, including malicious ones.
 
